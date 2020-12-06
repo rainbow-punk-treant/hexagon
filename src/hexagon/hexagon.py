@@ -30,15 +30,15 @@ class Window(Gtk.Window):
         self.line = self.builder.get_object("Line")
         output = ""
         l = ""
-        file = open("../templates/atLine", "r")
-        l += file.readlines()[0]
-        file.close()
-        
         for i in range(self.lines):
-            output += l + "\n"
-        self.line.set_label(output)
-        self.line.connect("clicked", self.onClick)
-        #self.c.add(l)
+            file = open("../templates/atLine", "r")
+            l += file.readlines()[0]
+            file.close()
+        
+            output += l + '\n'
+        self.line.set_text(output)
+        self.line.connect("button-press-event", self.onClick)
+        self.c.add(self.line)
         self.c.show()
         self.window.connect("destroy", Gtk.main_quit)
         self.title = self.builder.get_object("Titlebar")
@@ -46,8 +46,14 @@ class Window(Gtk.Window):
         self.title.set_label("Nachos")
 
         self.window.show_all()
-    def onClick(self, button):
+    def onClick(self, button, widget):
         print("Hallo")
+        added = Gtk.Entry()
+        added.style = added.get_style_context()
+        added.style.add_class("GtkEntry")
+        line = self.builder.get_object("Line")
+        added.set_text(line.get_text())
+        self.c.add(added)
         self.style.background = "orange"
         self.window.show_all()
     def main(self):
