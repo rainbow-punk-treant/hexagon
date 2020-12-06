@@ -16,6 +16,7 @@ class Window(Gtk.Window):
         self.builder = Gtk.Builder()
         self.builder.add_from_file("../glade/center.glade")
         self.window = self.builder.get_object("Center")
+        
         self.window.connect("destroy", Gtk.main_quit)
         self.title = self.builder.get_object("Titlebar")
 
