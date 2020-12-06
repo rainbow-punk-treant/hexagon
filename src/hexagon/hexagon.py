@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env/ python3
 
 import gi
 gi.require_version("Gtk", "3.0")
@@ -11,14 +11,18 @@ import threading
 import sys
 
 
-class Window():
-    builder = Gtk.Builder()
-    builder.add_from_file("../glade/center.glade")
-    window = builder.get_object("Center")
-    window.connect("destroy", Gtk.main_quit)
-    title = builder.get_object("Titlebar")
+class Window(Gtk.Window):
+    def __init__(self):
+        self.builder = Gtk.Builder()
+        self.builder.add_from_file("../glade/center.glade")
+        self.window = self.builder.get_object("Center")
+        self.window.connect("destroy", Gtk.main_quit)
+        self.title = self.builder.get_object("Titlebar")
 
-    title.set_label("Nachos")
+        self.title.set_label("Nachos")
 
-    window.show_all()
-    Gtk.main()
+        self.window.show_all()
+    def main(self):
+        Gtk.main()
+win = Window()
+win.main()
