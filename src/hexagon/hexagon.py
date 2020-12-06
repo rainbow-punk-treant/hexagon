@@ -47,11 +47,11 @@ class Window(Gtk.Window):
         self.window.show_all()
         for i in range(self.lines):
             end = self.onClick()
-            if end :
-                break
+            #if end :
+            #    break
+            self.c.show()
             self.window.show_all()
             time.sleep(0.01)
-            self.c.show()
 
     def onClick(self):
         if self.lineCount >= 28:
@@ -66,6 +66,8 @@ class Window(Gtk.Window):
         self.c.add(added)
         self.c.show()
         self.lineCount += 1
+        self.window.show_all()
+        return False
     def main(self):
         Gtk.main()
 win = Window()
