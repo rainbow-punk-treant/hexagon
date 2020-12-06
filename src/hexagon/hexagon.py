@@ -25,7 +25,7 @@ class Window(Gtk.Window):
         self.provider.load_from_path("../glade/style.css")
         self.style = self.window.get_style_context()
         self.style.add_provider_for_screen(self.screen, self.provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
-        self.lines = 30
+        self.lines = 40
         self.c = self.builder.get_object("LineContainer")
         self.line = self.builder.get_object("Line")
         output = ""
