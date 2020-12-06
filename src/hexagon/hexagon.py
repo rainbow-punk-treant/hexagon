@@ -37,29 +37,35 @@ class Window(Gtk.Window):
         
             output += l + '\n'
         self.line.set_text(output)
-        self.line.connect("button-press-event", self.onClick)
+        #self.line.connect("button-press-event", self.onClick)
         self.c.add(self.line)
         self.c.show()
         self.window.connect("destroy", Gtk.main_quit)
         self.title = self.builder.get_object("Titlebar")
 
         self.title.set_label("Nachos")
-
         self.window.show_all()
-    def onClick(self, button, widget):
+        for i in range(self.lines):
+            end = self.onClick()
+            if end :
+                break
+            self.window.show_all()
+            time.sleep(0.01)
+            self.c.show()
+
+    def onClick(self):
         if self.lineCount >= 28:
-            return
+            return True
         print("Hallo")
         added = Gtk.Entry()
         added.style = added.get_style_context()
         added.style.add_class("GtkEntry")
         line = self.builder.get_object("Line")
-        added.connect("button-press-event", self.onClick)
+        #added.connect("button-press-event", self.onClick)
         added.set_text(line.get_text())
         self.c.add(added)
-        self.style.background = "orange"
+        self.c.show()
         self.lineCount += 1
-        self.window.show_all()
     def main(self):
         Gtk.main()
 win = Window()
