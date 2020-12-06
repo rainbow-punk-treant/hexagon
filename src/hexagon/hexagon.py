@@ -30,13 +30,15 @@ class Window(Gtk.Window):
         self.line = self.builder.get_object("Line")
         output = ""
         l = ""
+        #file = open("../templates/splash", "r")
+        #lines = file.readlines()
         for i in range(self.lines):
-            file = open("../templates/atLine", "r")
-            l += file.readlines()[0]
-            file.close()
-        
-            output += l + '\n'
-        self.line.set_text(output)
+            if i < self.lines:
+                file = open("../templates/atLine", "r")
+                l += file.readline()
+                file.close()
+                output += l + str("\n")
+        #self.line.set_text(output)
         #self.line.connect("button-press-event", self.onClick)
         self.c.add(self.line)
         self.c.show()
@@ -47,8 +49,8 @@ class Window(Gtk.Window):
         self.window.show_all()
         for i in range(self.lines):
             end = self.onClick()
-            #if end :
-            #    break
+            if end :
+                break
             self.c.show()
             self.window.show_all()
             time.sleep(0.01)
