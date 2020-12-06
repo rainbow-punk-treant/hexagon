@@ -2,9 +2,16 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <object class="GtkListStore" id="liststore1"/>
   <object class="GtkWindow" id="Center">
+    <property name="width_request">-1</property>
+    <property name="height_request">-1</property>
     <property name="can_focus">False</property>
+    <property name="hexpand">True</property>
+    <property name="vexpand">True</property>
     <property name="window_position">center</property>
+    <property name="default_width">1920</property>
+    <property name="default_height">1060</property>
     <property name="gravity">center</property>
     <child>
       <placeholder/>
@@ -29,20 +36,6 @@
           <object class="GtkGrid">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <child>
-              <object class="GtkLabel" id="AltMenuFile">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">File</property>
-                <style>
-                  <class name="AltMenu"/>
-                </style>
-              </object>
-              <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
-              </packing>
-            </child>
             <child>
               <object class="GtkLabel" id="AltMenuEdit">
                 <property name="visible">True</property>
@@ -81,6 +74,17 @@
                 <property name="top_attach">0</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkComboBox" id="AltMenuFile">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="model">liststore1</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="left_attach">0</property>
@@ -92,6 +96,7 @@
           <object class="GtkGrid" id="LineContainer">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
             <child>
               <object class="GtkEntry" id="Line">
                 <property name="visible">True</property>
@@ -99,6 +104,9 @@
                 <property name="hexpand">True</property>
                 <property name="truncate_multiline">True</property>
                 <property name="placeholder_text" translatable="yes">input</property>
+                <style>
+                  <class name="inputLine"/>
+                </style>
               </object>
               <packing>
                 <property name="left_attach">0</property>

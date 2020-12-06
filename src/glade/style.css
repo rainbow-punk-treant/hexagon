@@ -2,3 +2,10 @@
 margin: 5px;
 padding: 5px;
 }
+
+.inputLine {
+  background: rgba(100, 200, 50, 0.5);
+}
+.GtkEntry {
+  background: rgba(1, 200, 33, 0.5);
+}
