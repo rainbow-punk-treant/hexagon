@@ -13,6 +13,7 @@ import sys
 
 class Window(Gtk.Window):
     def __init__(self):
+        self.lineContent = []
         self.lineCount = 0
         self.builder = Gtk.Builder()
         self.builder.add_from_file("../glade/center.glade")
@@ -37,6 +38,7 @@ class Window(Gtk.Window):
                 file = open("../templates/atLine", "r")
                 l += file.readline()
                 file.close()
+                self.lineContent.append(l)
                 output += l + str("\n")
         #self.line.set_text(output)
         #self.line.connect("button-press-event", self.onClick)
@@ -54,11 +56,13 @@ class Window(Gtk.Window):
             self.c.show()
             self.window.show_all()
             time.sleep(0.01)
+        print(len(self.lineContent))
 
     def onClick(self):
         if self.lineCount >= 28:
+            print(len(self.lineContent))
             return True
-        print("Hallo")
+
         added = Gtk.Entry()
         added.style = added.get_style_context()
         added.style.add_class("GtkEntry")
