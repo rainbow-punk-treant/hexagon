@@ -130,7 +130,7 @@ class Window(Gtk.Window):
                 print("nothing")
                 continue
             print("POSITION"+str(i))
-            if pos.is_focus() or self.row == i-1:
+            if pos.is_focus() or self.row == i:
                 print("Attaching a secondary descendent node.")
                 holder = Gtk.Box()
                 label = Gtk.Button()
@@ -144,18 +144,20 @@ class Window(Gtk.Window):
                 s.add_class("levelOne")
                 bar.set_hexpand(True)
                 bar.show()
-                box = self.builder.get_object("Box"+str(i+1))
-                holder.add(label)
-                holder.add(bar)
-                box.add(holder)
-                box.show_all()
-                self.row = i
-                return
+                if i != 0:
+                    box = self.builder.get_object("Box"+str(i-1))
+                    holder.add(label)
+                    holder.add(bar)
+                    box.add(holder)
+                    bar.grab_focus()
+                    box.show_all()
+                    #self.row = i
+                    return
     def addBar(self, button, event):
         for i in range(27):
             pos = self.builder.get_object("Line"+str(i))
 
-            if pos.is_focus() or self.row == i-1:
+            if pos.is_focus() or self.row == i:
                 print("Attaching a descendent node.")
                 holder = Gtk.Box()
                 label = Gtk.Button()
@@ -169,15 +171,15 @@ class Window(Gtk.Window):
                 s.add_class("levelOne")
                 bar.set_hexpand(True)
                 bar.show()
-               
-                box = self.builder.get_object("Box"+str(i+1))
-                holder.add(label)
-                holder.add(bar)
-                box.add(holder)
-                bar.grab_focus()
-                box.show_all()
-                self.row = i
-                return
+                if i != 0:
+                    box = self.builder.get_object("Box"+str(i+1))
+                    holder.add(label)
+                    holder.add(bar)
+                    box.add(holder)
+                    bar.grab_focus()
+                    box.show_all()
+                    self.row = i
+                    return
     def moveNext(self, key, event):
         print("HIT A KEY")
         print(key)
