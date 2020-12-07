@@ -55,7 +55,7 @@ class Window(Gtk.Window):
         self.provider.load_from_path("../glade/style.css")
         self.style = self.window.get_style_context()
         self.style.add_provider_for_screen(self.screen, self.provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
-        self.lines = 58
+        self.lines = 27
         self.c = self.builder.get_object("LineContainer")
         self.line = self.builder.get_object("Line0")
         self.line.connect("key-press-event", self.moveNext)
@@ -122,7 +122,7 @@ class Window(Gtk.Window):
         print(len(self.lineContent))
     #
     def addBar(self, button, event):
-        for i in range(56):
+        for i in range(27):
             pos = self.builder.get_object("Line"+str(i))
 
             if pos.is_focus():
@@ -132,7 +132,7 @@ class Window(Gtk.Window):
                 s.add_class("GtkEntry")
                 bar.show()
                 if i > 27:
-                    box = self.builder.get_object("Box"+str(i-4))
+                    box = self.builder.get_object("Box"+str(i-2))
                 else:
                     box = self.builder.get_object("Box"+str(i+1))
                 box.add(bar)
@@ -141,7 +141,7 @@ class Window(Gtk.Window):
         print("HIT A KEY")
         print(key)
         allnames = []
-        for i in range(58):
+        for i in range(27):
             allnames.append("Line"+str(i))
         
         keyname = Gdk.keyval_name(event.keyval)
@@ -189,7 +189,7 @@ class Window(Gtk.Window):
                 count += 1
    
     def spawn(self):
-        if self.lineCount >= 58:
+        if self.lineCount >= 27:
             print(len(self.lineContent))
             return True
 
