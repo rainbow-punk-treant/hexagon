@@ -49,7 +49,6 @@ class Window(Gtk.Window):
 
 
         self.window = self.builder.get_object("Center")
-        #self.window.__init__(self, title='Hexagon Editor')
         self.provider = Gtk.CssProvider()
         self.screen = self.window.get_screen()
         self.provider.load_from_path("../glade/style.css")
@@ -127,16 +126,24 @@ class Window(Gtk.Window):
 
             if pos.is_focus():
                 print("Attaching a descendent node.")
+                holder = Gtk.Box()
+                label = Gtk.Label()
+                label.set_text("         ")
                 bar = Gtk.Entry()
                 s = bar.get_style_context()
                 s.add_class("GtkEntry")
                 s.add_class("levelOne")
+                bar.set_hexpand(True)
+                #no, dang, that won't work
                 bar.show()
                 if i > 27:
                     box = self.builder.get_object("Box"+str(i-2))
                 else:
                     box = self.builder.get_object("Box"+str(i+1))
-                box.add(bar)
+                holder.add(label)
+                holder.add(bar)
+                holder.add(label)
+                box.add(holder)
                 box.show_all()
     def moveNext(self, key, event):
         print("HIT A KEY")
