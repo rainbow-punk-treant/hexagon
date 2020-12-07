@@ -16,6 +16,7 @@ class Window(Gtk.Window):
 
 
     def __init__(self):
+        Gtk.init()
         #I should use a class for this.
         self.lineContent = []
         #Lines should be collected into a list and referenced 
@@ -39,7 +40,7 @@ class Window(Gtk.Window):
         self.style.add_provider_for_screen(self.screen, self.provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
         self.lines = 28
         self.c = self.builder.get_object("LineContainer")
-        self.line = self.builder.get_object("Line")
+        self.line = self.builder.get_object("Line0")
         self.line.connect("key-press-event", self.hitEnter)
         
         output = ""
@@ -78,15 +79,18 @@ class Window(Gtk.Window):
         
         keyname = Gdk.keyval_name(event.keyval)
         print(keyname)
-        count = 26
-        round = 0
-        advance = False
         keyname = keyname.translate(str.maketrans('', '', ' \n\t\r'))
         if keyname == 'Return' or keyname == 'KP_Enter':
-                        self.Lines[count+1].grab_focus()
-                        self.Lines[count+1].show()
-        return
-        
+            for i in range(27):
+                line = self.builder.get_object("Line"+str(i))
+                
+                newLine = self.builder.get_object("Line"+str(i+1))
+                newLine.grab_focus()
+                newLine.show()
+                line = self.builder.get_object("Line"+str(i))
+                newLine = self.builder.get_object("Line"+str(i+2))
+                newLine.grab_focus()
+                newLine.show()
     def spawn(self):
         if self.lineCount >= 28:
             print(len(self.lineContent))
@@ -98,12 +102,13 @@ class Window(Gtk.Window):
         #print("NEW NAME"+str(self.lineCount))
         added.set_name(str(self.lineCount))
         self.LineNames.append(added.get_name())
-        line = self.builder.get_object("Line")
+        line = self.builder.get_object("Line0")
         added.connect("key-press-event", self.hitEnter)
         added.set_text(line.get_text())
-        self.c.add(added)
+        #self.c.add(added)
         self.Lines.append(added)
-        self.c.show()
+        #self.c.show()
+        
         self.lineCount += 1
         self.window.show_all()
         return False
