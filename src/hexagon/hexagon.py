@@ -94,9 +94,8 @@ class Window(Gtk.Window):
         self.c.show()
         
         self.window.connect("destroy", Gtk.main_quit)
-        self.title = self.builder.get_object("Titlebar")
+        self.window.set_title("Hexagon Editor")
 
-        self.title.set_label("Hexagon Editor")
         #self.window.show_all()
         for i in range(self.lines):
             end = self.spawn()
