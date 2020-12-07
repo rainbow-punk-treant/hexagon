@@ -130,6 +130,7 @@ class Window(Gtk.Window):
                 bar = Gtk.Entry()
                 s = bar.get_style_context()
                 s.add_class("GtkEntry")
+                s.add_class("levelOne")
                 bar.show()
                 if i > 27:
                     box = self.builder.get_object("Box"+str(i-2))
