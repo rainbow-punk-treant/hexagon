@@ -44,10 +44,11 @@ class Window(Gtk.Window):
         self.lines = 28
         self.c = self.builder.get_object("LineContainer")
         self.line = self.builder.get_object("Line0")
-        self.line.connect("key-press-event", self.hitEnter)
+        self.line.connect("key-press-event", self.moveNext)
+        self.line.connect("key-press-event", self.movePrevious)
         for l in range(self.lines):
             c = self.builder.get_object("Line"+str(l))
-            c.connect("key-press-event", self.hitEnter)
+            c.connect("key-press-event", self.moveNext)
             #c.connect("activate", self.moveNext)
         
         output = ""
@@ -79,7 +80,7 @@ class Window(Gtk.Window):
             time.sleep(0.01)
         print(len(self.lineContent))
     #
-    def hitEnter(self, key, event):
+    def moveNext(self, key, event):
         print("HIT A KEY")
         print(key)
         allnames = []
@@ -99,18 +100,37 @@ class Window(Gtk.Window):
                 print(str(n[:4]+str(count)))
                 #I hate hardcoding, but will work for now
                 if line.is_focus():
-                    newLine = self.builder.get_object("Line"+str(count+1))
+                    newLine = self.builder.get_object(n[:4]+str(count+1))
                     newLine.grab_focus()
                     newLine.show()
                     return
                 count += 1
-                #line = self.builder.get_object(n[3:]+str(i))
-                #newLine = self.builder.get_object(n[3:]+str(i+2))
-                #newLine.grab_focus()
-                #newLine.show()
-    def moveNext(self):
-        #todo
-        print("next")
+    def movePrevious(self, key, event):
+        print("HIT A KEY")
+        print(key)
+        allnames = []
+        for i in range(27):
+            allnames.append("Line"+str(i))
+        
+        keyname = Gdk.keyval_name(event.keyval)
+        print(keyname)
+        count = 0
+        keyname = keyname.translate(str.maketrans('', '', ' \n\t\r'))
+        if keyname == 'Up':
+            for n in allnames:
+                if count >= len(allnames):
+                    count = 0
+                
+                line = self.builder.get_object(n)
+                print(str(n[:4]+str(count)))
+                #I hate hardcoding, but will work for now
+                if line.is_focus():
+                    newLine = self.builder.get_object(n[:4]+str(count-1))
+                    newLine.grab_focus()
+                    newLine.show()
+                    return
+                count += 1
+   
     def spawn(self):
         if self.lineCount >= 28:
             print(len(self.lineContent))
@@ -123,7 +143,8 @@ class Window(Gtk.Window):
         added.set_name(str(self.lineCount))
         self.LineNames.append(added.get_name())
         line = self.builder.get_object("Line0")
-        added.connect("key-press-event", self.hitEnter)
+        added.connect("key-press-event", self.moveNext)
+        added.connect("key-press-event", self.movePrevious)
         added.set_text(line.get_text())
         #self.c.add(added)
         #self.Lines.append(added)
