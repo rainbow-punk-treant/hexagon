@@ -61,7 +61,7 @@ class Window(Gtk.Window):
         self.line.connect("key-press-event", self.movePrevious)
 
         editor = self.builderEd.get_object("editor")
-        editor.show()
+        #editor.show()
 
         for l in range(self.lines):
 
@@ -71,7 +71,7 @@ class Window(Gtk.Window):
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
                 lab = self.builder.get_object(str(l))
-                lab.set_text(str(l-28))
+                lab.set_text(str(l-29))
                 lab.show()
             else:
                 c = self.builder.get_object("Line"+str(l))
