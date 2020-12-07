@@ -128,7 +128,7 @@ class Window(Gtk.Window):
             if pos.is_focus():
                 print("Attaching a descendent node.")
                 bar = self.builderEd.get_object("Bar"+str(i))
-                button.attach_child(bar)
+                button.attach(bar)
     def moveNext(self, key, event):
         print("HIT A KEY")
         print(key)
