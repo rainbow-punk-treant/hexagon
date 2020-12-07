@@ -68,7 +68,6 @@
                   <object class="GtkLabel" id="Line29">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">HTML</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -1438,7 +1437,6 @@
                   <object class="GtkLabel" id="Line28">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">JS</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -2790,15 +2788,6 @@
                     <property name="top_attach">28</property>
                   </packing>
                 </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -3013,7 +3002,7 @@
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">New HTML</property>
+                    <property name="label" translatable="yes">  </property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -3029,7 +3018,7 @@
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">New Js</property>
+                    <property name="label" translatable="yes"> </property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -3045,7 +3034,7 @@
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">New Css</property>
+                    <property name="label" translatable="yes"> </property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -3061,7 +3050,7 @@
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">New Bash</property>
+                    <property name="label" translatable="yes">FILTER</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -3077,7 +3066,7 @@
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">New Go</property>
+                    <property name="label" translatable="yes">SEARCH</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -3093,7 +3082,7 @@
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">INTERPOLATE</property>
+                    <property name="label" translatable="yes">EXPORT</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -3173,7 +3162,7 @@
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">LOAD</property>
+                    <property name="label" translatable="yes">QUIT</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>

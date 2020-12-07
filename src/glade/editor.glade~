@@ -5,10 +5,7 @@
   <object class="GtkWindow" id="editor">
     <property name="can_focus">False</property>
     <child>
-      <placeholder/>
-    </child>
-    <child>
-      <object class="GtkGrid" id="BarContainer">
+      <object class="GtkGrid" id="LineContainer">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="hexpand">True</property>
@@ -27,7 +24,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar0">
+          <object class="GtkEntry" id="Line0">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -45,7 +42,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar1">
+          <object class="GtkEntry" id="Line1">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -63,7 +60,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar2">
+          <object class="GtkEntry" id="Line2">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -81,7 +78,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar3">
+          <object class="GtkEntry" id="Line3">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -99,7 +96,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar4">
+          <object class="GtkEntry" id="Line4">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -117,7 +114,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar5">
+          <object class="GtkEntry" id="Line5">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -135,7 +132,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar6">
+          <object class="GtkEntry" id="Line6">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -153,7 +150,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar7">
+          <object class="GtkEntry" id="Line7">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -171,7 +168,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar8">
+          <object class="GtkEntry" id="Line8">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -189,7 +186,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar9">
+          <object class="GtkEntry" id="Line9">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -207,7 +204,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar10">
+          <object class="GtkEntry" id="Line10">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -225,7 +222,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar11">
+          <object class="GtkEntry" id="Line11">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -243,7 +240,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar12">
+          <object class="GtkEntry" id="Line12">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -261,7 +258,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar13">
+          <object class="GtkEntry" id="Line13">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -279,7 +276,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar14">
+          <object class="GtkEntry" id="Line14">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -297,7 +294,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar15">
+          <object class="GtkEntry" id="Line15">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -315,7 +312,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar16">
+          <object class="GtkEntry" id="Line16">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -333,7 +330,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar17">
+          <object class="GtkEntry" id="Line17">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -351,7 +348,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar18">
+          <object class="GtkEntry" id="Line18">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -369,7 +366,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar19">
+          <object class="GtkEntry" id="Line19">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -387,7 +384,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar20">
+          <object class="GtkEntry" id="Line20">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -405,7 +402,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar21">
+          <object class="GtkEntry" id="Line21">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -423,7 +420,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar22">
+          <object class="GtkEntry" id="Line22">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -441,7 +438,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar23">
+          <object class="GtkEntry" id="Line23">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -459,7 +456,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar24">
+          <object class="GtkEntry" id="Line24">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -477,7 +474,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar25">
+          <object class="GtkEntry" id="Line25">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -495,7 +492,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar26">
+          <object class="GtkEntry" id="Line26">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -513,7 +510,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar27">
+          <object class="GtkEntry" id="Line27">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -531,7 +528,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEntry" id="Bar28">
+          <object class="GtkEntry" id="Line28">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="hexpand">True</property>
@@ -877,6 +874,96 @@
             <property name="left_attach">0</property>
             <property name="top_attach">0</property>
           </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
         </child>
       </object>
     </child>

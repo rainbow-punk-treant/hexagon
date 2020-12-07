@@ -23,7 +23,8 @@ class Window(Gtk.Window):
             c.connect("key-press-event", self.moveNext)
             c.connect("key-press-event", self.movePrevious)
             lab = self.builder.get_object(str(l))
-            lab.set_text(str(l))
+            #Uncomment the following line to get line numbers
+            #lab.set_text(str(l))
             lab.show()
         return editor
 
@@ -75,14 +76,20 @@ class Window(Gtk.Window):
                 if l == 28 or l == 29:
                     print("donothing")
                 else:
-                    lab.set_text(str(l-29))
+                    lab.set_text("   ")
+                    #uncomment the below line for line numbers
+                    #lab.set_text(str(l-29))
+                    
+
                     lab.show()
             else:
                 c = self.builder.get_object("Line"+str(l))
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
                 lab = self.builder.get_object(str(l))
-                lab.set_text(str(l))
+                lab.set_text("   ")
+                #uncomment the below line for line numbers
+                #lab.set_text(str(l))
                 lab.show()
         
         output = ""
@@ -98,7 +105,7 @@ class Window(Gtk.Window):
         self.c.show()
         
         self.window.connect("destroy", Gtk.main_quit)
-        self.window.set_title("Hexagon Editor")
+        self.window.set_title("Hexagon Discourse")
 
         #self.window.show_all()
         for i in range(self.lines):
@@ -175,7 +182,7 @@ class Window(Gtk.Window):
         line = self.builder.get_object("Line0")
         added.connect("key-press-event", self.moveNext)
         added.connect("key-press-event", self.movePrevious)
-        added.set_text(line.get_text())
+        #added.set_text(line.get_text())
         #self.c.add(added)
         #self.Lines.append(added)
         #self.c.show()
