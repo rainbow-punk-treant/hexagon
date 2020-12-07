@@ -47,6 +47,7 @@ class Window(Gtk.Window):
         self.builderEdd = Gtk.Builder()
         self.builderEdd.add_from_file("../glade/editor.glade")
 
+        self.found = False
 
 
 
@@ -123,14 +124,17 @@ class Window(Gtk.Window):
         print(len(self.lineContent))
     #
     def addBarSec(self, button, event):
-        for i in range(27):
+        for i in range(25, 1, -1):
+            self.found = False
             if i != 0:
                 pos = self.builder.get_object("Line"+str(i))
             else:
                 print("nothing")
                 continue
             print("POSITION"+str(i))
-            if pos.is_focus() or self.row == i:
+            if self.row == i and pos.is_focus():
+                self.found = True
+            if pos.is_focus() or self.found:
                 print("Attaching a secondary descendent node.")
                 holder = Gtk.Box()
                 label = Gtk.Button()
@@ -151,13 +155,15 @@ class Window(Gtk.Window):
                     box.add(holder)
                     bar.grab_focus()
                     box.show_all()
-                    #self.row = i
-                    return
+                    if self.found:
+                        self.row = i
+                        return
     def addBar(self, button, event):
-        for i in range(27):
+        for i in range(25, 1, -1):
             pos = self.builder.get_object("Line"+str(i))
-
-            if pos.is_focus() or self.row == i:
+            if self.row == i and pos.is_focus():
+                self.found = True
+            if pos.is_focus() or self.found:
                 print("Attaching a descendent node.")
                 holder = Gtk.Box()
                 label = Gtk.Button()
@@ -178,8 +184,9 @@ class Window(Gtk.Window):
                     box.add(holder)
                     bar.grab_focus()
                     box.show_all()
-                    self.row = i
-                    return
+                    if self.found:
+                        self.row = i
+                        return
     def moveNext(self, key, event):
         print("HIT A KEY")
         print(key)
