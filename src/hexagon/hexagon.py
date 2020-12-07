@@ -70,13 +70,20 @@ class Window(Gtk.Window):
         for l in range(self.lines):
 
 
-
-            c = self.builder.get_object("Line"+str(l))
-            c.connect("key-press-event", self.moveNext)
-            c.connect("key-press-event", self.movePrevious)
-            lab = self.builder.get_object(str(l))
-            lab.set_text(str(l))
-            lab.show()
+            if l >= 30:
+                c = self.builder.get_object("Line"+str(l))
+                c.connect("key-press-event", self.moveNext)
+                c.connect("key-press-event", self.movePrevious)
+                lab = self.builder.get_object(str(l))
+                lab.set_text(str(l-30))
+                lab.show()
+            else:
+                c = self.builder.get_object("Line"+str(l))
+                c.connect("key-press-event", self.moveNext)
+                c.connect("key-press-event", self.movePrevious)
+                lab = self.builder.get_object(str(l))
+                lab.set_text(str(l))
+                lab.show()
         
         output = ""
         l = ""
