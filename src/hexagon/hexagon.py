@@ -78,26 +78,13 @@ class Window(Gtk.Window):
         
         keyname = Gdk.keyval_name(event.keyval)
         print(keyname)
-        count = 0
+        count = 26
+        round = 0
+        advance = False
         keyname = keyname.translate(str.maketrans('', '', ' \n\t\r'))
         if keyname == 'Return' or keyname == 'KP_Enter':
-            for line in self.Lines:
-                
-                
-                #print(self.Lines[lines].get_name())
-                #print(str(lines))
-                print(count)
-                #print("NEXT LINE IS", thisLine+1)
-                self.Lines[count+1].grab_focus()
-                self.Lines[count+1].show()
-                position = len(self.Lines) - count
-                if line.get_name() == str(position):
-                    print("GOT ONE")
-                    return        
-
-                count += 1
-                
-            #count += 1
+                        self.Lines[count+1].grab_focus()
+                        self.Lines[count+1].show()
         return
         
     def spawn(self):
