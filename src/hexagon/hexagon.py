@@ -30,7 +30,7 @@ class Window(Gtk.Window):
 
 
         self.window = self.builder.get_object("Center")
-        
+        self.window.__init__(self, title='Hexagon Editor')
         self.provider = Gtk.CssProvider()
         self.screen = self.window.get_screen()
         self.provider.load_from_path("../glade/style.css")
@@ -39,6 +39,8 @@ class Window(Gtk.Window):
         self.lines = 28
         self.c = self.builder.get_object("LineContainer")
         self.line = self.builder.get_object("Line")
+        self.line.connect("key-press-event", self.hitEnter)
+        
         output = ""
         l = ""
         #file = open("../templates/splash", "r")
@@ -68,15 +70,22 @@ class Window(Gtk.Window):
             time.sleep(0.01)
         print(len(self.lineContent))
     #
-    def hitEnter(self, key, widget):
+    def hitEnter(self, key, event):
         print("HIT A KEY")
-        count = 0
         print(key)
-        for line in self.Lines:
-            if line.get_name().contains(str(count)):
-                self.Lines[str(count+1)].grab_focus()
-
-            count += 1
+        
+        
+        keyname = Gdk.keyval_name(event.keyval)
+        print(keyname)
+        keyname = keyname.translate(str.maketrans('', '', ' \n\t\r'))
+        if keyname == 'Return' or keyname == 'KP_Enter':
+            for lines in range(len(self.Lines)):
+                print(self.Lines[lines].get_name())
+                print(str(lines))
+                if str(self.Lines[lines].get_name()) is str(lines):
+                    self.Lines[lines+2].grab_focus()
+                    return
+        return
         
     def spawn(self):
         if self.lineCount >= 28:
@@ -86,12 +95,12 @@ class Window(Gtk.Window):
         added = Gtk.Entry()
         added.style = added.get_style_context()
         added.style.add_class("GtkEntry")
-        added.set_name("line"+str(self.lineCount))
+        added.set_name(str(self.lineCount))
         line = self.builder.get_object("Line")
-        line.connect("key-press-event", self.hitEnter)
         added.connect("key-press-event", self.hitEnter)
         added.set_text(line.get_text())
         self.c.add(added)
+        self.Lines.append(added)
         self.c.show()
         self.lineCount += 1
         self.window.show_all()
