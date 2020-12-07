@@ -48,13 +48,13 @@ class Window(Gtk.Window):
 
 
         self.window = self.builder.get_object("Center")
-        self.window.__init__(self, title='Hexagon Editor')
+        #self.window.__init__(self, title='Hexagon Editor')
         self.provider = Gtk.CssProvider()
         self.screen = self.window.get_screen()
         self.provider.load_from_path("../glade/style.css")
         self.style = self.window.get_style_context()
         self.style.add_provider_for_screen(self.screen, self.provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
-        self.lines = 56
+        self.lines = 58
         self.c = self.builder.get_object("LineContainer")
         self.line = self.builder.get_object("Line0")
         self.line.connect("key-press-event", self.moveNext)
@@ -66,13 +66,17 @@ class Window(Gtk.Window):
         for l in range(self.lines):
 
 
-            if l >= 30:
+            if l >= 29:
+                print("NUMBER",str(l))
                 c = self.builder.get_object("Line"+str(l))
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
                 lab = self.builder.get_object(str(l))
-                lab.set_text(str(l-29))
-                lab.show()
+                if l == 28 or l == 29:
+                    print("donothing")
+                else:
+                    lab.set_text(str(l-29))
+                    lab.show()
             else:
                 c = self.builder.get_object("Line"+str(l))
                 c.connect("key-press-event", self.moveNext)
@@ -110,7 +114,7 @@ class Window(Gtk.Window):
         print("HIT A KEY")
         print(key)
         allnames = []
-        for i in range(56):
+        for i in range(58):
             allnames.append("Line"+str(i))
         
         keyname = Gdk.keyval_name(event.keyval)
@@ -135,7 +139,7 @@ class Window(Gtk.Window):
         print("HIT A KEY")
         print(key)
         allnames = []
-        for i in range(27):
+        for i in range(26):
             allnames.append("Line"+str(i))
         
         keyname = Gdk.keyval_name(event.keyval)
@@ -158,7 +162,7 @@ class Window(Gtk.Window):
                 count += 1
    
     def spawn(self):
-        if self.lineCount >= 56:
+        if self.lineCount >= 58:
             print(len(self.lineContent))
             return True
 
