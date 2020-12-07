@@ -127,8 +127,19 @@ class Window(Gtk.Window):
 
             if pos.is_focus():
                 print("Attaching a descendent node.")
-                bar = self.builderEd.get_object("Bar"+str(i))
-                button.attach(bar)
+                bar = Gtk.Entry()
+                s = bar.get_style_context()
+                s.add_class("GtkEntry")
+                bar.show()
+                #bar = self.builderEd.get_object("Bar"+str(i))
+                #box = self.builder.get_object("Box"+str(i))
+                if i > 27:
+                    box = self.builder.get_object("Box"+str(i-4))
+                else:
+                    box = self.builder.get_object("Box"+str(i+1))
+                box.add(bar)
+                #self.show_all()
+                box.show_all()
     def moveNext(self, key, event):
         print("HIT A KEY")
         print(key)
