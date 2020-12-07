@@ -22,6 +22,7 @@ class Window(Gtk.Window):
         #by their get_name() property so as to combat the 
         #possibility of switching row numbers
         self.Lines = []
+        self.LineNames = []
 
 
         self.lineCount = 0
@@ -64,7 +65,7 @@ class Window(Gtk.Window):
         for i in range(self.lines):
             end = self.spawn()
             if end :
-                break
+                return
             self.c.show()
             self.window.show_all()
             time.sleep(0.01)
@@ -77,14 +78,26 @@ class Window(Gtk.Window):
         
         keyname = Gdk.keyval_name(event.keyval)
         print(keyname)
+        count = 0
         keyname = keyname.translate(str.maketrans('', '', ' \n\t\r'))
         if keyname == 'Return' or keyname == 'KP_Enter':
-            for lines in range(len(self.Lines)):
-                print(self.Lines[lines].get_name())
-                print(str(lines))
-                if str(self.Lines[lines].get_name()) is str(lines):
-                    self.Lines[lines+2].grab_focus()
-                    return
+            for line in self.Lines:
+                
+                
+                #print(self.Lines[lines].get_name())
+                #print(str(lines))
+                print(count)
+                #print("NEXT LINE IS", thisLine+1)
+                self.Lines[count+1].grab_focus()
+                self.Lines[count+1].show()
+                position = len(self.Lines) - count
+                if line.get_name() == str(position):
+                    print("GOT ONE")
+                    return        
+
+                count += 1
+                
+            #count += 1
         return
         
     def spawn(self):
@@ -95,7 +108,9 @@ class Window(Gtk.Window):
         added = Gtk.Entry()
         added.style = added.get_style_context()
         added.style.add_class("GtkEntry")
+        #print("NEW NAME"+str(self.lineCount))
         added.set_name(str(self.lineCount))
+        self.LineNames.append(added.get_name())
         line = self.builder.get_object("Line")
         added.connect("key-press-event", self.hitEnter)
         added.set_text(line.get_text())
