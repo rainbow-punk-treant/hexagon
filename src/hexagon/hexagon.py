@@ -68,10 +68,12 @@ class Window(Gtk.Window):
 
 
             if l >= 29:
-                print("NUMBER",str(l))
+                #print("NUMBER",str(l))
                 c = self.builder.get_object("Line"+str(l))
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
+                b = self.builder.get_object("button-"+str(l))
+                b.connect("button-press-event", self.addBar)
                 lab = self.builder.get_object(str(l))
                 if l == 28 or l == 29:
                     print("donothing")
@@ -87,6 +89,8 @@ class Window(Gtk.Window):
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
                 lab = self.builder.get_object(str(l))
+                b = self.builder.get_object("button-"+str(l))
+                b.connect("button-press-event", self.addBar)
                 lab.set_text("   ")
                 #uncomment the below line for line numbers
                 #lab.set_text(str(l))
@@ -117,6 +121,14 @@ class Window(Gtk.Window):
             time.sleep(0.01)
         print(len(self.lineContent))
     #
+    def addBar(self, button, event):
+        for i in range(56):
+            pos = self.builder.get_object("Line"+str(i))
+
+            if pos.is_focus():
+                print("Attaching a descendent node.")
+                bar = self.builderEd.get_object("Bar"+str(i))
+                button.attach_child(bar)
     def moveNext(self, key, event):
         print("HIT A KEY")
         print(key)
