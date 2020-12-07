@@ -12,6 +12,20 @@ import sys
 
 
 class Window(Gtk.Window):
+    def spawnEditor(self):
+        builder = Gtk.Builder()
+        builder.add_from_file("../glade/editor.glade")
+        editor = self.builder.get_object("editor")
+        #editor.show()
+        for l in range(self.lines):
+            c = self.builder.get_object("Line"+str(l))
+            
+            c.connect("key-press-event", self.moveNext)
+            c.connect("key-press-event", self.movePrevious)
+            lab = self.builder.get_object(str(l))
+            lab.set_text(str(l))
+            lab.show()
+        return editor
 
 
 
@@ -19,9 +33,6 @@ class Window(Gtk.Window):
         Gtk.init()
         #I should use a class for this.
         self.lineContent = []
-        #Lines should be collected into a list and referenced 
-        #by their get_name() property so as to combat the 
-        #possibility of switching row numbers
         self.Lines = []
         self.LineNames = []
 
@@ -32,6 +43,12 @@ class Window(Gtk.Window):
         self.lineCount = 0
         self.builder = Gtk.Builder()
         self.builder.add_from_file("../glade/center.glade")
+        self.builderEd = Gtk.Builder()
+        self.builderEd.add_from_file("../glade/editor.glade")
+        self.builderEdd = Gtk.Builder()
+        self.builderEdd.add_from_file("../glade/editor.glade")
+
+
 
 
         self.window = self.builder.get_object("Center")
@@ -41,20 +58,48 @@ class Window(Gtk.Window):
         self.provider.load_from_path("../glade/style.css")
         self.style = self.window.get_style_context()
         self.style.add_provider_for_screen(self.screen, self.provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
-        self.lines = 28
+        self.lines = 56
         self.c = self.builder.get_object("LineContainer")
         self.line = self.builder.get_object("Line0")
         self.line.connect("key-press-event", self.moveNext)
         self.line.connect("key-press-event", self.movePrevious)
+        #self.editor = self.spawnEditor()
+        #self.editor.show()
+        
+        #edditor = self.builderEdd.get_object("editor")
+        editor = self.builderEd.get_object("editor")
+        editor.show()
+        #edditor.show()
+        
+        #edditor.connect("destroy", Gtk.main_quit)
+        #editor.connect("destroy", Gtk.main_quit)
         for l in range(self.lines):
+            #ccc = self.builderEdd.get_object("Line"+str(l))
+            #ccc.connect("key-press-event", self.moveNext)
+            #ccc.connect("key-press-event", self.movePrevious)
+            #labbb = self.builderEdd.get_object(str(l))
+            #labbb.set_text(str(l))
+            #labbb.show()
+        
+        
+        
+            #cc = self.builderEd.get_object("Line"+str(l))
+            #cc.connect("key-press-event", self.moveNext)
+            #cc.connect("key-press-event", self.movePrevious)
+            #labb = self.builderEd.get_object(str(l))
+            #labb.set_text(str(l))
+            #labb.show()
+
+
             c = self.builder.get_object("Line"+str(l))
             c.connect("key-press-event", self.moveNext)
-            #c.connect("activate", self.moveNext)
+            c.connect("key-press-event", self.movePrevious)
+            lab = self.builder.get_object(str(l))
+            lab.set_text(str(l))
+            lab.show()
         
         output = ""
         l = ""
-        #file = open("../templates/splash", "r")
-        #lines = file.readlines()
         for i in range(self.lines):
             if i < self.lines:
                 file = open("../templates/atLine", "r")
@@ -62,15 +107,14 @@ class Window(Gtk.Window):
                 file.close()
                 self.lineContent.append(l)
                 output += l + str("\n")
-        #self.line.set_text(output)
-        #self.line.connect("button-press-event", self.onClick)
         self.c.add(self.line)
         self.c.show()
+        
         self.window.connect("destroy", Gtk.main_quit)
         self.title = self.builder.get_object("Titlebar")
 
         self.title.set_label("Nachos")
-        self.window.show_all()
+        #self.window.show_all()
         for i in range(self.lines):
             end = self.spawn()
             if end :
@@ -84,7 +128,7 @@ class Window(Gtk.Window):
         print("HIT A KEY")
         print(key)
         allnames = []
-        for i in range(27):
+        for i in range(56):
             allnames.append("Line"+str(i))
         
         keyname = Gdk.keyval_name(event.keyval)
@@ -132,7 +176,7 @@ class Window(Gtk.Window):
                 count += 1
    
     def spawn(self):
-        if self.lineCount >= 28:
+        if self.lineCount >= 56:
             print(len(self.lineContent))
             return True
 
