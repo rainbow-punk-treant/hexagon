@@ -63,32 +63,12 @@ class Window(Gtk.Window):
         self.line = self.builder.get_object("Line0")
         self.line.connect("key-press-event", self.moveNext)
         self.line.connect("key-press-event", self.movePrevious)
-        #self.editor = self.spawnEditor()
-        #self.editor.show()
-        
-        #edditor = self.builderEdd.get_object("editor")
+
         editor = self.builderEd.get_object("editor")
         editor.show()
-        #edditor.show()
-        
-        #edditor.connect("destroy", Gtk.main_quit)
-        #editor.connect("destroy", Gtk.main_quit)
+
         for l in range(self.lines):
-            #ccc = self.builderEdd.get_object("Line"+str(l))
-            #ccc.connect("key-press-event", self.moveNext)
-            #ccc.connect("key-press-event", self.movePrevious)
-            #labbb = self.builderEdd.get_object(str(l))
-            #labbb.set_text(str(l))
-            #labbb.show()
-        
-        
-        
-            #cc = self.builderEd.get_object("Line"+str(l))
-            #cc.connect("key-press-event", self.moveNext)
-            #cc.connect("key-press-event", self.movePrevious)
-            #labb = self.builderEd.get_object(str(l))
-            #labb.set_text(str(l))
-            #labb.show()
+
 
 
             c = self.builder.get_object("Line"+str(l))
