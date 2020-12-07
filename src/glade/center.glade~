@@ -41,42 +41,33 @@
                 <property name="can_focus">False</property>
               </object>
               <packing>
-                <property name="left_attach">3</property>
+                <property name="left_attach">4</property>
                 <property name="top_attach">0</property>
               </packing>
             </child>
             <child>
-              <object class="GtkGrid">
+              <object class="GtkLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkGrid" id="LineContainer1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="orientation">vertical</property>
+                <property name="column_spacing">1</property>
                 <child>
                   <object class="GtkLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">3</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkButton">
                     <property name="label" translatable="yes">HTML</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkButton">
-                    <property name="label" translatable="yes">JS</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -84,100 +75,857 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
-                    <property name="label" translatable="yes">CSS</property>
+                  <object class="GtkEntry" id="Line29">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">0</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
                   </object>
                   <packing>
-                    <property name="left_attach">2</property>
-                    <property name="top_attach">0</property>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">1</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
-                    <property name="label" translatable="yes">SPAWN INTERPRETER WINDOW</property>
+                  <object class="GtkEntry" id="Line30">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">0</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
                   </object>
                   <packing>
-                    <property name="left_attach">6</property>
-                    <property name="top_attach">0</property>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">2</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
-                    <property name="label" translatable="yes">GO</property>
+                  <object class="GtkEntry" id="Line31">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">0</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
                   </object>
                   <packing>
-                    <property name="left_attach">4</property>
-                    <property name="top_attach">0</property>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">3</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox">
+                  <object class="GtkEntry" id="Line32">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">0</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line33">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">0</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line34">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line35">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line36">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">8</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line37">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">9</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line38">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">10</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line39">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">11</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line40">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">12</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line41">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">13</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line42">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">14</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line43">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">15</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line44">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">16</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line45">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">17</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line46">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">18</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line47">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">19</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line48">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">20</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line49">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">21</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line50">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">22</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line51">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">23</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line52">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">24</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line53">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">25</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line54">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">26</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line55">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">27</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line56">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">28</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEntry" id="Line57">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="max_length">200</property>
+                    <property name="width_chars">20</property>
+                    <property name="max_width_chars">150</property>
+                    <property name="input_purpose">alpha</property>
+                    <style>
+                      <class name="GtkEntry"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">29</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="30">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="baseline_position">top</property>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="label" translatable="yes">GIT</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="hexpand">True</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">2</property>
-                      </packing>
-                    </child>
+                    <property name="label" translatable="yes">0</property>
                   </object>
                   <packing>
-                    <property name="left_attach">5</property>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="31">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="32">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="33">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="34">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="35">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="36">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">8</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="37">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">9</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="38">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">10</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="39">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">11</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="40">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">12</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="41">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">13</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="42">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">14</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="43">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">15</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="44">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">16</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="45">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">17</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="46">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">18</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="47">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">19</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="48">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">20</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="49">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">21</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="50">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">22</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="51">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">23</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="52">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">24</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="53">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">25</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="54">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">26</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="55">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">27</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="56">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">28</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="57">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">29</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="58">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="59">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
                     <property name="top_attach">0</property>
                   </packing>
                 </child>
-              </object>
-              <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton">
-                <property name="label" translatable="yes">DEPLOY</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -191,24 +939,25 @@
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="orientation">vertical</property>
+                <property name="column_spacing">1</property>
                 <child>
                   <object class="GtkLabel">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Editor</property>
+                    <property name="label" translatable="yes">JS</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">0</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkEntry" id="Line">
+                  <object class="GtkEntry" id="Line0">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">0</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -216,7 +965,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">1</property>
                   </packing>
                 </child>
@@ -226,7 +975,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">0</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -234,7 +983,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">2</property>
                   </packing>
                 </child>
@@ -244,7 +993,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">0</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -252,7 +1001,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">3</property>
                   </packing>
                 </child>
@@ -262,7 +1011,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">0</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -270,7 +1019,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">4</property>
                   </packing>
                 </child>
@@ -280,7 +1029,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">0</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -288,7 +1037,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">5</property>
                   </packing>
                 </child>
@@ -298,7 +1047,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -306,7 +1055,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">6</property>
                   </packing>
                 </child>
@@ -316,7 +1065,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -324,7 +1073,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">7</property>
                   </packing>
                 </child>
@@ -334,7 +1083,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -342,7 +1091,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">8</property>
                   </packing>
                 </child>
@@ -352,7 +1101,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -360,7 +1109,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">9</property>
                   </packing>
                 </child>
@@ -370,7 +1119,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -378,7 +1127,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">10</property>
                   </packing>
                 </child>
@@ -388,7 +1137,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -396,7 +1145,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">11</property>
                   </packing>
                 </child>
@@ -406,7 +1155,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -414,7 +1163,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">12</property>
                   </packing>
                 </child>
@@ -424,7 +1173,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -432,7 +1181,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">13</property>
                   </packing>
                 </child>
@@ -442,7 +1191,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -450,7 +1199,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">14</property>
                   </packing>
                 </child>
@@ -460,7 +1209,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -468,7 +1217,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">15</property>
                   </packing>
                 </child>
@@ -478,7 +1227,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -486,7 +1235,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">16</property>
                   </packing>
                 </child>
@@ -496,7 +1245,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -504,7 +1253,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">17</property>
                   </packing>
                 </child>
@@ -514,7 +1263,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -522,7 +1271,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">18</property>
                   </packing>
                 </child>
@@ -532,7 +1281,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -540,7 +1289,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">19</property>
                   </packing>
                 </child>
@@ -550,7 +1299,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -558,7 +1307,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">20</property>
                   </packing>
                 </child>
@@ -568,7 +1317,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -576,7 +1325,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">21</property>
                   </packing>
                 </child>
@@ -586,7 +1335,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -594,7 +1343,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">22</property>
                   </packing>
                 </child>
@@ -604,7 +1353,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -612,7 +1361,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">23</property>
                   </packing>
                 </child>
@@ -622,7 +1371,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -630,7 +1379,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">24</property>
                   </packing>
                 </child>
@@ -640,7 +1389,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -648,7 +1397,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">25</property>
                   </packing>
                 </child>
@@ -658,7 +1407,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -666,7 +1415,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">26</property>
                   </packing>
                 </child>
@@ -676,7 +1425,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -684,7 +1433,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">27</property>
                   </packing>
                 </child>
@@ -694,7 +1443,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -702,7 +1451,7 @@
                     </style>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
+                    <property name="left_attach">1</property>
                     <property name="top_attach">28</property>
                   </packing>
                 </child>
@@ -712,7 +1461,7 @@
                     <property name="can_focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="max_length">200</property>
-                    <property name="width_chars">200</property>
+                    <property name="width_chars">20</property>
                     <property name="max_width_chars">150</property>
                     <property name="input_purpose">alpha</property>
                     <style>
@@ -720,8 +1469,338 @@
                     </style>
                   </object>
                   <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">29</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="3">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="4">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="5">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">5</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="6">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="7">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">7</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="8">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">8</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="9">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">9</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="10">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">10</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="11">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">11</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="12">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">12</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="13">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">13</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="14">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">14</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="15">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">15</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="16">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">16</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="17">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">17</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="18">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">18</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="19">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">19</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="20">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">20</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="21">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">21</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="22">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">22</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="23">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">23</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="24">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">24</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="25">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">25</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="26">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">26</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="27">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">27</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="28">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">28</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="29">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
                     <property name="left_attach">0</property>
                     <property name="top_attach">29</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="0">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">0</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
                   </packing>
                 </child>
                 <child>
@@ -754,24 +1833,268 @@
                 <child>
                   <placeholder/>
                 </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">1</property>
-                <property name="width">4</property>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
-                <property name="label" translatable="yes">BUILD</property>
+              <object class="GtkBox">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
+                <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkGrid">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <property name="row_spacing">1</property>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label" translatable="yes">HTML</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label" translatable="yes">JS</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label" translatable="yes">CSS</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">2</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label" translatable="yes">SPAWN INTERPRETER WINDOW</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">6</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="label" translatable="yes">GO</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                      </object>
+                      <packing>
+                        <property name="left_attach">4</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="baseline_position">top</property>
+                        <child>
+                          <object class="GtkButton">
+                            <property name="label" translatable="yes">GIT</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="hexpand">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="left_attach">5</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
               </object>
               <packing>
-                <property name="left_attach">2</property>
+                <property name="left_attach">5</property>
                 <property name="top_attach">0</property>
               </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
             </child>
           </object>
           <packing>

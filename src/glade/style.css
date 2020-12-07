@@ -25,6 +25,10 @@ padding: 5px;
   background: rgba(150, 100, 150, 1);
 }
 
+button {
+  background: rgba(50, 50, 50, 1);
+}
+
 .GtkWindow {
   color: rgba(0, 100, 0, 1);
   background: rgba(0, 0, 0, 1);

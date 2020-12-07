@@ -1,4 +1,4 @@
-#!/bin/env/ python3
+#!/bin/bash/python3
 
 import gi
 gi.require_version("Gtk", "3.0")
@@ -36,10 +36,6 @@ class Window(Gtk.Window):
         self.Lines = []
         self.LineNames = []
 
-        #this should be stored and referenced throughout the code
-        self.lp = 0
-
-
         self.lineCount = 0
         self.builder = Gtk.Builder()
         self.builder.add_from_file("../glade/center.glade")
@@ -75,7 +71,7 @@ class Window(Gtk.Window):
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
                 lab = self.builder.get_object(str(l))
-                lab.set_text(str(l-30))
+                lab.set_text(str(l-28))
                 lab.show()
             else:
                 c = self.builder.get_object("Line"+str(l))
