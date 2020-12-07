@@ -12,6 +12,8 @@ import sys
 
 
 class Window(Gtk.Window):
+    lp = 0
+
     def spawnEditor(self):
         builder = Gtk.Builder()
         builder.add_from_file("../glade/editor.glade")
@@ -36,7 +38,7 @@ class Window(Gtk.Window):
         self.lineContent = []
         self.Lines = []
         self.LineNames = []
-
+        self.row = 0
         self.lineCount = 0
         self.builder = Gtk.Builder()
         self.builder.add_from_file("../glade/center.glade")
@@ -120,31 +122,62 @@ class Window(Gtk.Window):
             time.sleep(0.01)
         print(len(self.lineContent))
     #
-    def addBar(self, button, event):
+    def addBarSec(self, button, event):
         for i in range(27):
-            pos = self.builder.get_object("Line"+str(i))
-
-            if pos.is_focus():
-                print("Attaching a descendent node.")
+            if i != 0:
+                pos = self.builder.get_object("Line"+str(i))
+            else:
+                print("nothing")
+                continue
+            print("POSITION"+str(i))
+            if pos.is_focus() or self.row == i-1:
+                print("Attaching a secondary descendent node.")
                 holder = Gtk.Box()
-                label = Gtk.Label()
-                label.set_text("         ")
+                label = Gtk.Button()
+                
+                label.set_label(str(i))
+                ls = label.get_style_context()
+                ls.add_class("levelTwo")
                 bar = Gtk.Entry()
                 s = bar.get_style_context()
                 s.add_class("GtkEntry")
                 s.add_class("levelOne")
                 bar.set_hexpand(True)
-                #no, dang, that won't work
                 bar.show()
-                if i > 27:
-                    box = self.builder.get_object("Box"+str(i-2))
-                else:
-                    box = self.builder.get_object("Box"+str(i+1))
+                box = self.builder.get_object("Box"+str(i+1))
                 holder.add(label)
                 holder.add(bar)
-                holder.add(label)
                 box.add(holder)
                 box.show_all()
+                self.row = i
+                return
+    def addBar(self, button, event):
+        for i in range(27):
+            pos = self.builder.get_object("Line"+str(i))
+
+            if pos.is_focus() or self.row == i-1:
+                print("Attaching a descendent node.")
+                holder = Gtk.Box()
+                label = Gtk.Button()
+                label.connect("button-press-event", self.addBarSec)
+                label.set_label(str(i))
+                ls = label.get_style_context()
+                ls.add_class("levelTwo")
+                bar = Gtk.Entry()
+                s = bar.get_style_context()
+                s.add_class("GtkEntry")
+                s.add_class("levelOne")
+                bar.set_hexpand(True)
+                bar.show()
+               
+                box = self.builder.get_object("Box"+str(i+1))
+                holder.add(label)
+                holder.add(bar)
+                box.add(holder)
+                bar.grab_focus()
+                box.show_all()
+                self.row = i
+                return
     def moveNext(self, key, event):
         print("HIT A KEY")
         print(key)
