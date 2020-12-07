@@ -7,15 +7,14 @@ padding: 5px;
   border-color: orange;
   border-radius: 5px;
   border-style: dotted;
+  background-image: url("../../art/bean.png");
 }
 
 @keyframes plop {
   from {
     background: rgba(100, 200, 150, 1);
   }
-  25% {
-    background: rgba(200, 150, 100, 1);
-  }
+
   75% {
     background: rgba(150, 100, 150, 1);
   }
@@ -26,15 +25,32 @@ padding: 5px;
 .GtkEntry {
   animation-duration: 1s;
   animation-name: plop;
-  color: rgba(0, 100, 0, 1);
-  background: rgba(10, 35, 10, 0.75);
+  color: rgba(0, 0, 0, 1);
   border-style: dotted;
+  background: rgba(50, 50, 50, 0.50);
 }
 
 .inputLine {
   background: rgba(150, 100, 150, 1);
 }
+@keyframes ploomp {
+  from {
+    min-width: 25px;
 
+  }
+  25% {
+    min-width: 20px;
+   
+  }
+  75% {
+    min-width: 22px;
+    
+  }
+  to {
+    min-width: 25px;
+    
+  }
+}
 .control {
   animation-duration: 0.75s;
   animation-name: plop;
@@ -44,16 +60,16 @@ padding: 5px;
 button {
   animation-duration: 0.75s;
   animation-name: plop;
-  background: rgba(10, 75, 10, 0.75);
+  background: mediumseagreen;
 }
 
 button:active {
   animation-duration: 1s;
   animation-name: plop;
   animation-iteration-count: 1;
+  background: cyan;
 }
 
 .GtkWindow {
-  color: rgba(0, 100, 0, 1);
-  background: rgba(0, 0, 0, 1);
+  color: rgba(0, 10, 0, 1);
 }
