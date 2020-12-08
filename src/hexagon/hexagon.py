@@ -76,6 +76,7 @@ class Window(Gtk.Window):
                 c.connect("key-press-event", self.movePrevious)
                 b = self.builder.get_object("button-"+str(l))
                 b.connect("button-press-event", self.addBar)
+                b.connect("activate", self.resumePosition)
                 lab = self.builder.get_object(str(l))
                 if l == 28 or l == 29:
                     print("donothing")
@@ -93,6 +94,7 @@ class Window(Gtk.Window):
                 lab = self.builder.get_object(str(l))
                 b = self.builder.get_object("button-"+str(l))
                 b.connect("button-press-event", self.addBar)
+                b.connect("activate", self.resumePosition)
                 lab.set_text("   ")
                 #uncomment the below line for line numbers
                 #lab.set_text(str(l))
@@ -123,6 +125,10 @@ class Window(Gtk.Window):
             time.sleep(0.01)
         print(len(self.lineContent))
     #
+    def resumePosition(self):
+        p = self.builder.get_object("Line"+str(self.row))
+        p.grab_focus()
+        return
     def addBarSec(self, button, event):
         for i in range(25, 1, -1):
             self.found = False
@@ -153,7 +159,7 @@ class Window(Gtk.Window):
                     holder.add(label)
                     holder.add(bar)
                     box.add(holder)
-                    pos.grab_focus()
+                    #pos.grab_focus()
                     box.show_all()
                     if self.found:
                         self.row = i
@@ -182,7 +188,7 @@ class Window(Gtk.Window):
                     holder.add(label)
                     holder.add(bar)
                     box.add(holder)
-                    pos.grab_focus()
+                    #pos.grab_focus()
                     box.show_all()
                     if self.found:
                         self.row = i
