@@ -74,7 +74,15 @@ button:active {
   animation-iteration-count: 1;
   background: cyan;
 }
+.header {
+  background: cyan;
 
+}
+
+.titleHeader{
+  background: navy;
+
+}
 .GtkWindow {
   color: rgba(0, 10, 0, 1);
 }

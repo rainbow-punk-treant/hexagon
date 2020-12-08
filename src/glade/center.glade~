@@ -47,16 +47,6 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="button-0">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-              </object>
-              <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkBox" id="button-30">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -460,24 +450,6 @@
                   <packing>
                     <property name="left_attach">2</property>
                     <property name="top_attach">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkEntry" id="Line0">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="hexpand">True</property>
-                    <property name="max_length">200</property>
-                    <property name="width_chars">0</property>
-                    <property name="max_width_chars">150</property>
-                    <property name="input_purpose">alpha</property>
-                    <style>
-                      <class name="GtkEntry"/>
-                    </style>
-                  </object>
-                  <packing>
-                    <property name="left_attach">2</property>
-                    <property name="top_attach">1</property>
                   </packing>
                 </child>
                 <child>
@@ -1275,7 +1247,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="button-1">
+                  <object class="GtkButton">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1286,6 +1258,9 @@
                         <property name="stock">gtk-about</property>
                       </object>
                     </child>
+                    <style>
+                      <class name="header"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">3</property>
@@ -1304,6 +1279,9 @@
                         <property name="stock">gtk-about</property>
                       </object>
                     </child>
+                    <style>
+                      <class name="header"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">3</property>
@@ -2307,9 +2285,20 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkButton" id="button-1">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="stock">gtk-about</property>
+                      </object>
+                    </child>
+                    <style>
+                      <class name="header"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">0</property>
@@ -2317,7 +2306,35 @@
                   </packing>
                 </child>
                 <child>
-                  <placeholder/>
+                  <object class="GtkButton" id="button-0">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="stock">gtk-about</property>
+                      </object>
+                    </child>
+                    <style>
+                      <class name="header"/>
+                    </style>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="Line0">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">2</property>
+                    <property name="top_attach">1</property>
+                  </packing>
                 </child>
                 <child>
                   <placeholder/>
@@ -2661,6 +2678,9 @@
             <child>
               <placeholder/>
             </child>
+            <child>
+              <placeholder/>
+            </child>
           </object>
           <packing>
             <property name="left_attach">0</property>
@@ -2678,5 +2698,10 @@
     </style>
   </object>
   <object class="GtkEntryBuffer" id="entrybuffer1"/>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-missing-image</property>
+  </object>
   <object class="GtkListStore" id="liststore1"/>
 </interface>

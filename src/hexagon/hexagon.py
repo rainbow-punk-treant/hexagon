@@ -57,7 +57,7 @@ class Window(Gtk.Window):
         self.provider.load_from_path("../glade/style.css")
         self.style = self.window.get_style_context()
         self.style.add_provider_for_screen(self.screen, self.provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
-        self.lines = 27
+        self.lines = 28
         self.c = self.builder.get_object("LineContainer")
         self.line = self.builder.get_object("Line0")
         self.line.connect("key-press-event", self.moveNext)
@@ -74,7 +74,11 @@ class Window(Gtk.Window):
                 c = self.builder.get_object("Line"+str(l))
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
-                b = self.builder.get_object("button-"+str(l))
+                if l == 0:
+                    ll = 1
+                else:
+                    ll = l
+                b = self.builder.get_object("button-"+str(ll))
                 b.connect("button-press-event", self.addBar)
                 b.connect("activate", self.resumePosition)
                 lab = self.builder.get_object(str(l))
@@ -130,7 +134,7 @@ class Window(Gtk.Window):
         p.grab_focus()
         return
     def addBarSec(self, button, event):
-        for i in range(27, 0, -1):
+        for i in range(28, 0, -1):
             self.found = False
             if i != 0:
                 pos = self.builder.get_object("Line"+str(i))
@@ -171,7 +175,7 @@ class Window(Gtk.Window):
                         self.row = i
                         return
     def addBar(self, button, event):
-        for i in range(27, 0, -1):
+        for i in range(28, 0, -1):
             pos = self.builder.get_object("Line"+str(i))
             if self.row == i and pos.is_focus():
                 self.found = True
@@ -203,7 +207,7 @@ class Window(Gtk.Window):
         print("HIT A KEY")
         print(key)
         allnames = []
-        for i in range(27):
+        for i in range(28):
             allnames.append("Line"+str(i))
         
         keyname = Gdk.keyval_name(event.keyval)
@@ -228,7 +232,7 @@ class Window(Gtk.Window):
         print("HIT A KEY")
         print(key)
         allnames = []
-        for i in range(26):
+        for i in range(27):
             allnames.append("Line"+str(i))
         
         keyname = Gdk.keyval_name(event.keyval)
@@ -251,7 +255,7 @@ class Window(Gtk.Window):
                 count += 1
    
     def spawn(self):
-        if self.lineCount >= 27:
+        if self.lineCount >= 28:
             print(len(self.lineContent))
             return True
 
