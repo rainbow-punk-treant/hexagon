@@ -2330,6 +2330,9 @@
                   <object class="GtkLabel" id="Line0">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <style>
+                      <class name="titleHeader"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>

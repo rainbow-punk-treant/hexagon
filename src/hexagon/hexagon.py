@@ -24,7 +24,13 @@ class Window(Gtk.Window):
             
             c.connect("key-press-event", self.moveNext)
             c.connect("key-press-event", self.movePrevious)
-            lab = self.builder.get_object(str(l))
+            cs = c.get_style_context()
+            if l != 0:
+                cs.add_class("titleBar") 
+                lab = self.builder.get_object(str(l))
+            else:
+                cs.add_class("titleBar")
+
             #Uncomment the following line to get line numbers
             #lab.set_text(str(l))
             lab.show()
@@ -159,7 +165,8 @@ class Window(Gtk.Window):
                 bs.add_class("levelThree")
                 bar = Gtk.Entry()
                 s = bar.get_style_context()
-                s.add_class("GtkEntry")
+                
+                s.add_class("mainEntry")
                 s.add_class("levelOne")
                 bar.set_hexpand(True)
                 bar.show()
@@ -189,7 +196,7 @@ class Window(Gtk.Window):
                 ls.add_class("levelTwo")
                 bar = Gtk.Entry()
                 s = bar.get_style_context()
-                s.add_class("GtkEntry")
+                s.add_class("mainEntry")
                 s.add_class("levelOne")
                 bar.set_hexpand(True)
                 bar.show()
