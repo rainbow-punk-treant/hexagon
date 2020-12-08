@@ -130,7 +130,7 @@ class Window(Gtk.Window):
         p.grab_focus()
         return
     def addBarSec(self, button, event):
-        for i in range(25, 1, -1):
+        for i in range(27, 0, -1):
             self.found = False
             if i != 0:
                 pos = self.builder.get_object("Line"+str(i))
@@ -171,7 +171,7 @@ class Window(Gtk.Window):
                         self.row = i
                         return
     def addBar(self, button, event):
-        for i in range(25, 1, -1):
+        for i in range(27, 0, -1):
             pos = self.builder.get_object("Line"+str(i))
             if self.row == i and pos.is_focus():
                 self.found = True
