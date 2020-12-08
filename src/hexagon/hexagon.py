@@ -149,11 +149,11 @@ class Window(Gtk.Window):
                 bar.set_hexpand(True)
                 bar.show()
                 if i != 0:
-                    box = self.builder.get_object("Box"+str(i-1))
+                    box = self.builder.get_object("Box"+str(i+1))
                     holder.add(label)
                     holder.add(bar)
                     box.add(holder)
-                    bar.grab_focus()
+                    pos.grab_focus()
                     box.show_all()
                     if self.found:
                         self.row = i
@@ -182,7 +182,7 @@ class Window(Gtk.Window):
                     holder.add(label)
                     holder.add(bar)
                     box.add(holder)
-                    bar.grab_focus()
+                    pos.grab_focus()
                     box.show_all()
                     if self.found:
                         self.row = i
