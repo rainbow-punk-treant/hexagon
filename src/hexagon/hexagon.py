@@ -137,17 +137,22 @@ class Window(Gtk.Window):
             else:
                 print("nothing")
                 continue
-            print("POSITION"+str(i))
+            #print("POSITION"+str(i))
             if self.row == i and pos.is_focus():
                 self.found = True
             if pos.is_focus() or self.found:
                 print("Attaching a secondary descendent node.")
                 holder = Gtk.Box()
                 label = Gtk.Button()
-                
-                label.set_label(str(i))
+                l = Gtk.Button()
+                b = Gtk.Button()
+                b.set_label("&")
+                l.set_label("*")
+                label.set_label("*")
                 ls = label.get_style_context()
                 ls.add_class("levelTwo")
+                bs = b.get_style_context()
+                bs.add_class("levelThree")
                 bar = Gtk.Entry()
                 s = bar.get_style_context()
                 s.add_class("GtkEntry")
@@ -157,6 +162,7 @@ class Window(Gtk.Window):
                 if i != 0:
                     box = self.builder.get_object("Box"+str(i+1))
                     holder.add(label)
+                    holder.add(l)
                     holder.add(bar)
                     box.add(holder)
                     #pos.grab_focus()
@@ -174,7 +180,7 @@ class Window(Gtk.Window):
                 holder = Gtk.Box()
                 label = Gtk.Button()
                 label.connect("button-press-event", self.addBarSec)
-                label.set_label(str(i))
+                label.set_label("*")
                 ls = label.get_style_context()
                 ls.add_class("levelTwo")
                 bar = Gtk.Entry()
