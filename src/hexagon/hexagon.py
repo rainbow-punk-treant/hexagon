@@ -12,6 +12,12 @@ import sys
 
 
 class Window(Gtk.Window):
+    #This is actually going to be pivotal to the whole shebang
+    # We need to be able to  track what row the user is clicking on
+    #and which rows should be inferred. Possibly by clicking into
+    #the field, but it'd be better if they just grabbed from either
+    #the for looped is_focus() part and get notified of any  
+    #changes
     lp = 0
 
     def spawnEditor(self):
