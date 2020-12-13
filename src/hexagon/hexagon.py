@@ -171,7 +171,7 @@ class Window(Gtk.Window):
                 print("nothing")
                 continue
             #print("POSITION"+str(i))
-            if self.lp == i and pos.is_focus():
+            if self.lp == i or pos.is_focus():
                 self.found = True
             if pos.is_focus() or self.found:
                 print("Attaching a secondary descendent node.")
