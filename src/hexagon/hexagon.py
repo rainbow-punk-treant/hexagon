@@ -26,8 +26,7 @@ class Window(Gtk.Window):
         for i in range(28):
             o = self.builder.get_object("Line"+str(i))
             if o.has_focus():
-                self.lp = i
-
+                self.lp = i+1
         print("Cursor position is on row"+str(self.lp))
 
     def spawnEditor(self):
@@ -193,17 +192,17 @@ class Window(Gtk.Window):
                 s.add_class("levelOne")
                 bar.set_hexpand(True)
                 bar.show()
-                if i != 0:
-                    box = self.builder.get_object("Box"+str(self.lp))
-                    holder.add(label)
-                    holder.add(l)
-                    holder.add(bar)
-                    box.add(holder)
-                    #pos.grab_focus()
-                    box.show_all()
-                    if self.found:
-                        self.row = i
-                        return
+                # if i != 0:
+                box = self.builder.get_object("Box"+str(self.lp))
+                holder.add(label)
+                holder.add(l)
+                holder.add(bar)
+                box.add(holder)
+                #pos.grab_focus()
+                box.show_all()
+                if self.found:
+                    self.row = i
+                    return
     def addBar(self, button, event):
         for i in range(28, 0, -1):
             pos = self.builder.get_object("Line"+str(i))
