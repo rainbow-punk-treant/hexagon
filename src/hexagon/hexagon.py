@@ -20,6 +20,16 @@ class Window(Gtk.Window):
     #changes
     lp = 0
 
+    def moveFocus(self, widget, event):
+        print("There might even be an event passed")
+        numLines = 28
+        for i in range(28):
+            o = self.builder.get_object("Line"+str(i))
+            if o.has_focus():
+                self.lp = i
+
+        print("Cursor position is on row"+str(self.lp))
+
     def spawnEditor(self):
         builder = Gtk.Builder()
         builder.add_from_file("../glade/editor.glade")
@@ -30,6 +40,7 @@ class Window(Gtk.Window):
             
             c.connect("key-press-event", self.moveNext)
             c.connect("key-press-event", self.movePrevious)
+            c.connect("focus-in-event", self.moveFocus)
             cs = c.get_style_context()
             if l != 0:
                 cs.add_class("titleBar") 
@@ -74,6 +85,7 @@ class Window(Gtk.Window):
         self.line = self.builder.get_object("Line0")
         self.line.connect("key-press-event", self.moveNext)
         self.line.connect("key-press-event", self.movePrevious)
+        self.line.connect("focus-in-event", self.moveFocus)
 
         editor = self.builderEd.get_object("editor")
         #editor.show()
@@ -86,6 +98,7 @@ class Window(Gtk.Window):
                 c = self.builder.get_object("Line"+str(l))
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
+                c.connect("focus-in-event", self.moveFocus)
                 if l == 0:
                     ll = 1
                 else:
@@ -93,6 +106,7 @@ class Window(Gtk.Window):
                 b = self.builder.get_object("button-"+str(ll))
                 b.connect("button-press-event", self.addBar)
                 b.connect("activate", self.resumePosition)
+                b.connect("focus-in-event", self.moveFocus)
                 lab = self.builder.get_object(str(l))
                 if l == 28 or l == 29:
                     print("donothing")
@@ -107,10 +121,12 @@ class Window(Gtk.Window):
                 c = self.builder.get_object("Line"+str(l))
                 c.connect("key-press-event", self.moveNext)
                 c.connect("key-press-event", self.movePrevious)
+                c.connect("focus-in-event", self.moveFocus)
                 lab = self.builder.get_object(str(l))
                 b = self.builder.get_object("button-"+str(l))
                 b.connect("button-press-event", self.addBar)
                 b.connect("activate", self.resumePosition)
+                b.connect("focus-in-event", self.moveFocus)
                 lab.set_text("   ")
                 #uncomment the below line for line numbers
                 #lab.set_text(str(l))
@@ -129,6 +145,7 @@ class Window(Gtk.Window):
         self.c.show()
         
         self.window.connect("destroy", Gtk.main_quit)
+        #not this one, this is the whole window
         self.window.set_title("Hexagon Discourse")
 
         #self.window.show_all()
@@ -197,6 +214,7 @@ class Window(Gtk.Window):
                 holder = Gtk.Box()
                 label = Gtk.Button()
                 label.connect("button-press-event", self.addBarSec)
+                label.connect("focus-in-event", self.moveFocus)
                 label.set_label("*")
                 ls = label.get_style_context()
                 ls.add_class("levelTwo")
@@ -281,6 +299,7 @@ class Window(Gtk.Window):
         line = self.builder.get_object("Line0")
         added.connect("key-press-event", self.moveNext)
         added.connect("key-press-event", self.movePrevious)
+        added.connect("focus-in-event", self.moveFocus)
         #added.set_text(line.get_text())
         #self.c.add(added)
         #self.Lines.append(added)
