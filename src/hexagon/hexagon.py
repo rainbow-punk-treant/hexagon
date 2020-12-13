@@ -159,8 +159,8 @@ class Window(Gtk.Window):
         print(len(self.lineContent))
     #
     def resumePosition(self):
-        p = self.builder.get_object("Line"+str(self.row))
-        p.grab_focus()
+        p = self.builder.get_object("Line"+str(self.lp))
+        #p.grab_focus()
         return
     def addBarSec(self, button, event):
         for i in range(28, 0, -1):
@@ -171,7 +171,7 @@ class Window(Gtk.Window):
                 print("nothing")
                 continue
             #print("POSITION"+str(i))
-            if self.row == i and pos.is_focus():
+            if self.lp == i and pos.is_focus():
                 self.found = True
             if pos.is_focus() or self.found:
                 print("Attaching a secondary descendent node.")
@@ -194,7 +194,7 @@ class Window(Gtk.Window):
                 bar.set_hexpand(True)
                 bar.show()
                 if i != 0:
-                    box = self.builder.get_object("Box"+str(i+1))
+                    box = self.builder.get_object("Box"+str(self.lp))
                     holder.add(label)
                     holder.add(l)
                     holder.add(bar)
@@ -207,7 +207,7 @@ class Window(Gtk.Window):
     def addBar(self, button, event):
         for i in range(28, 0, -1):
             pos = self.builder.get_object("Line"+str(i))
-            if self.row == i and pos.is_focus():
+            if self.lp == i and pos.is_focus():
                 self.found = True
             if pos.is_focus() or self.found:
                 print("Attaching a descendent node.")
@@ -225,7 +225,7 @@ class Window(Gtk.Window):
                 bar.set_hexpand(True)
                 bar.show()
                 if i != 0:
-                    box = self.builder.get_object("Box"+str(i+1))
+                    box = self.builder.get_object("Box"+str(self.lp+1))
                     holder.add(label)
                     holder.add(bar)
                     box.add(holder)
@@ -254,8 +254,9 @@ class Window(Gtk.Window):
                 print(str(n[:4]+str(count)))
                 #I hate hardcoding, but will work for now
                 if line.is_focus():
+                    self.lp = count
                     newLine = self.builder.get_object(n[:4]+str(count+1))
-                    newLine.grab_focus()
+                    #newLine.grab_focus()
                     newLine.show()
                     return
                 count += 1
@@ -279,8 +280,9 @@ class Window(Gtk.Window):
                 print(str(n[:4]+str(count)))
                 #I hate hardcoding, but will work for now
                 if line.is_focus():
+                    self.lp = count
                     newLine = self.builder.get_object(n[:4]+str(count-1))
-                    newLine.grab_focus()
+                    #newLine.grab_focus()
                     newLine.show()
                     return
                 count += 1
