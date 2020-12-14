@@ -93,9 +93,9 @@ class Window(Gtk.Window):
         self.lines = 28
         self.c = self.builder.get_object("LineContainer")
         self.line = self.builder.get_object("Line0")
-        self.line.connect("key-press-event", self.moveNext)
-        self.line.connect("key-press-event", self.movePrevious)
-        self.line.connect("focus-in-event", self.moveFocus)
+        # self.line.connect("key-press-event", self.moveNext)
+        # self.line.connect("key-press-event", self.movePrevious)
+        # self.line.connect("focus-in-event", self.moveFocus)
 
         editor = self.builderEd.get_object("editor")
         #editor.show()
@@ -110,7 +110,7 @@ class Window(Gtk.Window):
                 c.connect("key-press-event", self.movePrevious)
                 c.connect("focus-in-event", self.moveFocus)
                 if l == 0:
-                    ll = 1
+                    continue
                 else:
                     ll = l
                 b = self.builder.get_object("button-"+str(ll))
