@@ -31,6 +31,19 @@ class Window(Gtk.Window):
                 self.lp = i
         print("Cursor position is on row"+str(self.lp))
 
+    def moveFocusNotBar(self, widget, event):
+        print("There might even be an event passed")
+        numLines = 28
+        for i in range(28):
+            
+            o = self.builder.get_object("Line"+str(i))
+
+            if o.has_focus():
+                ind.set_visible(True)
+                ind.show()
+                self.lp = i
+        print("Cursor position is on row"+str(self.lp))
+        self.PosLabel.set_text("Editing row::"+str(self.lp))
     def moveFocus(self, widget, event):
         print("There might even be an event passed")
         numLines = 28
@@ -41,12 +54,17 @@ class Window(Gtk.Window):
             if i != 0:
                 ind = self.builder.get_object("indicator-"+str(i))
                 ind.set_visible(False)
-            if o.has_focus():
+                inStyle = ind.get_style_context()
+            if o.has_focus() and i != 0:
+                inStyle.add_class("disp")
+  
                 ind.set_visible(True)
                 ind.show()
                 self.lp = i
         print("Cursor position is on row"+str(self.lp))
         self.PosLabel.set_text("Editing row::"+str(self.lp))
+
+
 
     def spawnEditor(self):
         builder = Gtk.Builder()
