@@ -24,6 +24,8 @@ class Window(Gtk.Window):
         print("There might even be an event passed")
         numLines = 28
         for i in range(28):
+            indicator = self.builder.get_object("indicator-"+str(i))
+            indicator.show()
             o = self.builder.get_object("Line"+str(i))
             if o.has_focus():
                 self.lp = i
@@ -33,8 +35,15 @@ class Window(Gtk.Window):
         print("There might even be an event passed")
         numLines = 28
         for i in range(28):
+            
             o = self.builder.get_object("Line"+str(i))
+
+            if i != 0:
+                ind = self.builder.get_object("indicator-"+str(i))
+                ind.set_visible(False)
             if o.has_focus():
+                ind.set_visible(True)
+                ind.show()
                 self.lp = i
         print("Cursor position is on row"+str(self.lp))
         self.PosLabel.set_text("Editing row::"+str(self.lp))
@@ -232,7 +241,7 @@ class Window(Gtk.Window):
                 s = bar.get_style_context()
                 s.add_class("mainEntry")
                 s.add_class("levelOne")
-                bar.connect("focus-in-event", self.moveFocus)
+                bar.connect("focus-in-event", self.moveFocusNotBar)
                 
                 bar.set_hexpand(True)
                 bar.show()
