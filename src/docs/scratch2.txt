@@ -1,0 +1,51 @@
+ok! next session, aka, i fuck
+around on the computer a lot
+
+ctrl O!
+
+Ok, so what has to happen is
+the secondary add row function
+needs to index by whether the 
+secondary row is focus and 
+add below as opposed to above
+
+addbarSec, this is the function
+that adds the bar with the twobuttons
+
+one sec this music is killing me
+ded there we go
+
+
+
+
+
+only the buttons on the right
+and the first button under
+have any signal connections
+working correctly right now
+
+
+let's fix that!
+
+and with that, i'm out for tonight
+
+catch ya later
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Right now I'm looking to see
+ if i can trigger the adding
+ a descendent printf
+

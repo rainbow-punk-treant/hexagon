@@ -1,0 +1,155 @@
+Well that was fun! Now, to code.
+
+this is going to drive me nuts
+
+how the HELL do you change the 
+font in this damned thing?!
+
+ok! I don't hate it, and I THINK
+it's different, which is totalaly
+valid
+
+ok, so the way i'm going to do 
+this is to attach to a notificaiton
+signal on focus change for EVERY
+object and when it changes
+change an object variable
+
+sound simple enough? :D
+
+one sec i need some dubstep
+woo! ok, found my dubstep
+
+
+
+
+I know it because I wrote every single 
+line of this code
+and this is the first time
+i have referenced this signal in 
+this program
+
+
+the other reason, is i'm totally
+programming not how i usually do
+the font thing really threw me off
+so i'm just being 
+
+
+a good wizard always revels in a
+conjuring
+
+we'll get there
+
+anyways! it's like a flip or flop
+in settings
+
+
+
+
+there might even be an event pas
+ed means that my first plan worked
+there is a function triggering
+with a widget, an event and
+it happens every time I click
+on one of the enties
+so now we flesh out moveFocus
+
+I"ll just do it
+
+
+Ok, so that worked perfectly
+
+the last part was me saving
+a workable release section
+
+I try only to commit when every
+thing is hunky dory, just good 
+practice
+
+
+ok, so what's happening now
+is that the number is being stored
+but not referenced. Easy enough fix!
+
+
+that's easy enough
+i thought it was an infinite loop
+for a second
+
+but it's just spawning a new window
+for every single match of the lp
+number
+
+
+now I think it's changing the lp
+variable
+
+almost!
+
+
+
+THAT COUNTS AS A HELL L YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
+
+ok, I think I"m going to call it
+there for now, I code mainly
+during the daytime.
+
+I will be on tomorrow at noon! and
+everyday if I can this month!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now we're setting up a new work
+space! baahhahhaaha
+
+no realy this one is cool, you
+ll see
+
+ok, so the cyberpunk theme is ni
+ce, but the syntax highlighitn
+should be hurled into the sun
+
+I gotta change the theme,
+vscodium
+now it's the italics, everything
+i do is monospaced
+
+(when coding and not :P
+we have a ok, now' to amp up
+these bottom panels
+
+That was a lesson in only working
+on a profile after it's been nam
+d otherwise the default override
+s
+
+
+
+
+
+
